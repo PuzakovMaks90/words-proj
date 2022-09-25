@@ -12,6 +12,7 @@ console.log(text);
 */
 
 
+/*
 let text = 'Сегодня пион целый день, ромашка, звучат, пион тревоги ромашка';
 console.log(text);
 
@@ -26,9 +27,9 @@ function badWordFilter() {
     
     return newText;
 }
+*/
 
 
-/*
 let text = 'Сегодня пион целый день, ромашка, звучат, пион тревоги ромашка';
 console.log(text);
 
@@ -37,11 +38,14 @@ console.log(badWordFilter(newText));
 
 function badWordFilter(badWord1, badWord2) {
     if (badWord1.includes('ромашка')) {
-        newText = newText.replace('ромашка', '*******');
+        while (newText.includes('ромашка')) {
+            newText = newText.replace('ромашка', '*******');
+        }
     } else if (badWord2.includes('пион')) {
-        newText = newText.replace('пион', '****');
+        while (newText.include('пион')) {
+            newText = newText.replace('пион', '****');
+        }
     }
 
     return newText;
 }
-*/
